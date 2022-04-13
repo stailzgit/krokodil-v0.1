@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/crocodil-menu-img.png";
+import Logo from "../../assets/crocodil3-menu-img.png";
 import "./Main.css";
 import { FiSettings } from "react-icons/fi";
 import { CgCardHearts } from "react-icons/cg";
@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { resetPlayerSlice } from "../../store/reducers/PlayerSlice";
 import { resetCardSlice } from "../../store/reducers/CardSlice";
-import { resetSettingsSlice } from "../../store/reducers/SettingsSlice";
+import { newGame } from "../../store/reducers/SettingsSlice";
 import { clearStorage } from "../../utils/local-storage";
 import { ROUTES } from "../../hooks/routes";
 
@@ -34,7 +34,7 @@ const Main = (props: Props) => {
   const onNewGameClick = () => {
     dispatch(resetPlayerSlice());
     dispatch(resetCardSlice());
-    dispatch(resetSettingsSlice());
+    dispatch(newGame());
     navigate(ROUTES.CREATE_PLAYERS);
   };
 

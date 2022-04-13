@@ -9,9 +9,8 @@ import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../hooks/routes";
 import { IThemeCards } from "../../models/ICards";
 import { cardsToGame } from "../../store/reducers/CardSlice";
-import StartGameSound from "../../assets/sound/start_game.mp3";
-import { Howl, Howler } from "howler";
 import { setGameProcess } from "../../store/reducers/SettingsSlice";
+import { krocodilSound } from "../../hooks/sounds";
 
 const CardSelectionPage = () => {
   const dispatch = useAppDispatch();
@@ -23,16 +22,12 @@ const CardSelectionPage = () => {
   const { isSound } = useAppSelector((state) => state.settingsSlice);
   const navigate = useNavigate();
 
-  const StartGamePlay = new Howl({
-    src: [StartGameSound, "play_start_game"],
-  });
-
   const onStartGameClick = () => {
     if (totalCards > 0) {
       navigate(ROUTES.STATS);
       dispatch(cardsToGame());
       dispatch(setGameProcess(true));
-      isSound && StartGamePlay.play();
+      isSound && krocodilSound.startGame();
     }
   };
 

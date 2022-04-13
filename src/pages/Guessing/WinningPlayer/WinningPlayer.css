@@ -23,6 +23,7 @@
     border-radius: 1.5rem;
     padding: 0.5rem 2rem;
     transition: var(--transition);
+    font-weight: 600;
 }
 
 .winner__list-item:hover {

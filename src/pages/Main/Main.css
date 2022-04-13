@@ -7,8 +7,9 @@
 }
 
 .main__image {
-    width: clamp(200px, 60%, 350px);
-    margin-bottom: 30px;
+    width: clamp(300px, 60%, 500px);
+    margin-bottom: -9px;
+    z-index: 10;
 }
 
 .btn-menu {

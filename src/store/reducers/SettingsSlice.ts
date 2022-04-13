@@ -21,14 +21,14 @@ type SettingsStateType = {
   reasonEndGame: string;
 };
 
-const initialState: SettingsStateType = {
+export const initialState: SettingsStateType = {
   isEndGame: false,
   isGameProcess: false,
   styleGame: "five_words",
   typeEndGame: "max_score",
-  maxScore: 300,
+  maxScore: 200,
   isNeedRoundTime: true,
-  roundTime: 30,
+  roundTime: 60,
   isSound: true,
   isRepeatCards: false,
   reasonEndGame: "",
@@ -38,17 +38,9 @@ export const settingsSlice = createSlice({
   name: "settings",
   initialState: initialState,
   reducers: {
-    resetSettingsSlice(state) {
+    newGame(state) {
       state.isEndGame = false;
       state.isGameProcess = false;
-      // state.styleGame = "five_words"
-      // state.typeEndGame = "max_score"
-      // state.maxScore = 300
-      // state.isNeedRoundTime = true
-      // state.roundTime = 30
-      // state.isSound = true
-      // state.isRepeatCards = false
-      // state.reasonEndGame = ""
     },
     setGameProcess(state, action: PayloadAction<boolean>) {
       state.isGameProcess = action.payload;
@@ -126,11 +118,7 @@ export const settingsSlice = createSlice({
   },
 });
 
-export const {
-  checkEndGame,
-  resetSettingsSlice,
-  saveSettings,
-  setGameProcess,
-} = settingsSlice.actions;
+export const { checkEndGame, newGame, saveSettings, setGameProcess } =
+  settingsSlice.actions;
 
 export default settingsSlice.reducer;

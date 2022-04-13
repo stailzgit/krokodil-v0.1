@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Guessing.css";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
-import { addScore, addScoreToTeam } from "../../store/reducers/PlayerSlice";
-import App from "./../../App";
+import { addScore } from "../../store/reducers/PlayerSlice";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../hooks/routes";
-import { Howl, Howler } from "howler";
-import StartGuessingSound from "../../assets/sound/start_guessing.mp3";
-import EndGuessingSound from "../../assets/sound/end_guessing.mp3";
+
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { HiOutlineCheck } from "react-icons/hi";
 import { IoMdClose } from "react-icons/io";
-type Props = {};
-
-const StartGuessingPlay = new Howl({
-  src: [StartGuessingSound, "play_guessing"],
-});
-
-const EndGuessingPlay = new Howl({
-  src: [EndGuessingSound, "play_guessing"],
-  volume: 0.5,
-});
+import { krocodilSound } from "../../hooks/sounds";
 
 const RenderTime = (
   remainingTime: number,
@@ -28,17 +16,17 @@ const RenderTime = (
   roundTime: number
 ) => {
   const [stopSound, setStopSound] = useState(false);
-  //Ререндер 2 раза и нужно предотвратить повтор звука - stopSound и setTimeout
+  //Ререндер 2 раза и из-за этого нужно предотвратить повтор звука - stopSound и setTimeout
   if (isSound && !stopSound) {
     if (remainingTime === roundTime || remainingTime === 10) {
-      StartGuessingPlay.play();
+      krocodilSound.tiktak();
       setStopSound(true);
       setTimeout(() => {
         setStopSound(false);
       }, 1000);
     }
     if (remainingTime === 1) {
-      EndGuessingPlay.play();
+      krocodilSound.timeIsOver();
     }
   }
   if (remainingTime === 0) {
@@ -47,7 +35,7 @@ const RenderTime = (
   return <div className="guessing__timer-value">{remainingTime}</div>;
 };
 
-const Guessing = (props: Props) => {
+const Guessing = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { currentWord } = useAppSelector((state) => state.cardsReducer);
@@ -61,16 +49,18 @@ const Guessing = (props: Props) => {
   const [showWord, setShowWord] = useState(false);
 
   const onButtonClick = (isGuessed: boolean) => {
+    //Если угадал
     if (isGuessed) {
-      //Если угадал
+      krocodilSound.success();
       if (stylePlayers === "Teams") {
         dispatch(addScore({ score: currentWord.score }));
         navigate(ROUTES.STATS);
       } else if (stylePlayers === "Players") {
         navigate(ROUTES.WINNING_PLAYER);
       }
-    } else {
       //Если не угадал
+    } else {
+      krocodilSound.failure();
       dispatch(addScore({ score: 0 }));
       navigate(ROUTES.STATS);
     }
@@ -107,12 +97,7 @@ const Guessing = (props: Props) => {
         {showWord ? currentWord.word : "***************"}
       </div>
 
-      <div
-        className="guessing__word"
-        onClick={() => setShowWord((prev) => !prev)}
-      >
-        +{currentWord.score}
-      </div>
+      <div className="guessing__word">+{currentWord.score}</div>
 
       <div className="guessing__buttons">
         <button

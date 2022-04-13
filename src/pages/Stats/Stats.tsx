@@ -64,7 +64,7 @@ const Stats = (props: Props) => {
       </div>
 
       <button className="btn btn-primary stats__button" onClick={onClickButton}>
-        Выбрать карту
+        Стартуем
       </button>
 
       <div className="stats__back" onClick={onBackClick}>

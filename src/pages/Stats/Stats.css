@@ -62,9 +62,13 @@
 }
 
 .stats__button {
+    padding: 1rem 2rem;
     font-size: 1rem;
     border-radius: 2rem;
     border: 3px solid var(--color-primary);
+    color: var(--color-white);
+    font-weight: 600;
+    vertical-align: middle;
 }
 
 .stats__back {
@@ -72,6 +76,11 @@
     background-color: transparent;
     display: flex;
     align-items: center;
+    transition: var(--transition);
+}
+
+.stats__back:hover {
+    transform: scale(1.2);
 }
 
 .stats__back-icon {

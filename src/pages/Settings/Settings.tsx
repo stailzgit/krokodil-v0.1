@@ -3,19 +3,14 @@ import "./Settings.css";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { useAppSelector, useAppDispatch } from "../../hooks/redux";
-import {
-  resetSettingsSlice,
-  saveSettings,
-  StyleEndGameType,
-} from "../../store/reducers/SettingsSlice";
+import { saveSettings } from "../../store/reducers/SettingsSlice";
 import { shallowEqual } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../hooks/routes";
+import { initialState } from "./../../store/reducers/SettingsSlice";
 type Props = {};
 
 const Settings = (props: Props) => {
-  console.log("rerender Settings");
-
   const { typeEndGame, maxScore, isSound, roundTime, isNeedRoundTime } =
     useAppSelector((state) => state.settingsSlice, shallowEqual);
   const dispatch = useAppDispatch();
@@ -56,7 +51,12 @@ const Settings = (props: Props) => {
   };
 
   const onDefaultClick = () => {
-    dispatch(resetSettingsSlice());
+    setIsNeedTime(initialState.isNeedRoundTime);
+    setTime(initialState.roundTime);
+    setLocalTypeEndGame(initialState.typeEndGame);
+    setScore(initialState.maxScore);
+    setIsNeedTime(initialState.isNeedRoundTime);
+    setlocalIsSound(initialState.isSound);
   };
 
   const updateSettings = () => {
@@ -64,6 +64,7 @@ const Settings = (props: Props) => {
     setTime(roundTime);
     setScore(maxScore);
     setLocalTypeEndGame(typeEndGame);
+    setlocalIsSound(isSound);
   };
 
   useEffect(() => {
@@ -135,7 +136,7 @@ const Settings = (props: Props) => {
       <div className="settings__props-title">Звуки:</div>
       <div className="settings__props-wrap">
         <label className="settings__check-label">
-          <span>Звуковое сопровождение</span>
+          <span>Включить звуки</span>
           <input
             type="checkbox"
             checked={localIssound}
