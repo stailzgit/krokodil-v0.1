@@ -1,22 +1,24 @@
 {
   "files": {
-    "main.css": "/krokodil/static/css/main.1029dfe2.css",
-    "main.js": "/krokodil/static/js/main.b0c73f72.js",
+    "main.css": "/krokodil/static/css/main.0c483213.css",
+    "main.js": "/krokodil/static/js/main.7596f60f.js",
+    "static/media/failure.mp3": "/krokodil/static/media/failure.8da2396058e95c498930.mp3",
     "static/media/start_guessing.mp3": "/krokodil/static/media/start_guessing.5de7727ab9fa511fa1ec.mp3",
+    "static/media/img-impossible.jpg": "/krokodil/static/media/img-impossible.fa4ac5361b9547865a96.jpg",
     "static/media/img-hard.jpg": "/krokodil/static/media/img-hard.6dec5a2971a9e95f2e8b.jpg",
+    "static/media/crocodil3-menu-img.png": "/krokodil/static/media/crocodil3-menu-img.d9dd8bc428463cae79b9.png",
     "static/media/end_guessing.mp3": "/krokodil/static/media/end_guessing.ffdac43b53c345cbeced.mp3",
     "static/media/img-normal.jpg": "/krokodil/static/media/img-normal.4c6eff2905af9d2aca16.jpg",
-    "static/media/img-impossible.jpg": "/krokodil/static/media/img-impossible.54e21e3f301469fe3a69.jpg",
+    "static/media/success.mp3": "/krokodil/static/media/success.b84d0b4c81044c4cb817.mp3",
     "static/media/img-suicide.jpg": "/krokodil/static/media/img-suicide.6209b8ccc322c0b0f914.jpg",
-    "static/media/img-easy.jpg": "/krokodil/static/media/img-easy.e2f2b1a729b611deee1b.jpg",
-    "static/media/crocodil-menu-img.png": "/krokodil/static/media/crocodil-menu-img.1484f3b3e201dfd5cd25.png",
+    "static/media/img-easy.jpg": "/krokodil/static/media/img-easy.26f1f126b35f145e6273.jpg",
     "static/media/start_game.mp3": "/krokodil/static/media/start_game.561e3ea9b6ffa52469f0.mp3",
     "index.html": "/krokodil/index.html",
-    "main.1029dfe2.css.map": "/krokodil/static/css/main.1029dfe2.css.map",
-    "main.b0c73f72.js.map": "/krokodil/static/js/main.b0c73f72.js.map"
+    "main.0c483213.css.map": "/krokodil/static/css/main.0c483213.css.map",
+    "main.7596f60f.js.map": "/krokodil/static/js/main.7596f60f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1029dfe2.css",
-    "static/js/main.b0c73f72.js"
+    "static/css/main.0c483213.css",
+    "static/js/main.7596f60f.js"
   ]
 }
