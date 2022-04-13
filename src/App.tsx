@@ -29,6 +29,7 @@ const App = () => {
           <Route path={ROUTES.GUESSING} element={<Guessing />} />
           <Route path={ROUTES.WINNING_PLAYER} element={<WinningPlayer />} />
           <Route path={ROUTES.GAME_RESULTS} element={<GameResults />} />
+          <Route path={"*"} element={<Main />} />
         </Routes>
       ) : (
         <Routes>
@@ -41,6 +42,7 @@ const App = () => {
           <Route path={ROUTES.GUESSING} element={<Guessing />} />
           <Route path={ROUTES.WINNING_PLAYER} element={<WinningPlayer />} />
           <Route path={ROUTES.GAME_RESULTS} element={<GameResults />} />
+          <Route path={"*"} element={<Main />} />
         </Routes>
       )}
     </div>
