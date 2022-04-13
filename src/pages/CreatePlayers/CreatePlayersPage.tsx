@@ -78,7 +78,7 @@ const CreatePlayers = () => {
   };
 
   const nextStep = () => {
-    if (errorNamePlayer || errorCountPlayer) return;
+    if (errorCountPlayer) return;
     navigate(ROUTES.CARD_SELECTION);
   };
 
