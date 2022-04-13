@@ -1,6 +1,6 @@
 {
-  "name": "krokodil-v0.1",
-  "homepage": "https://stailzgit.github.io/krokodil",
+  "name": "krokodil",
+  "homepage": "https://stailzgit.github.io/krokodil/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
