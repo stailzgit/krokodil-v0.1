@@ -1,0 +1,66 @@
+.guessing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.guessing__word {
+    width: clamp(300px, 80%, 500px);
+    display: inline;
+    font-size: 1.5rem;
+    word-wrap: break-word;
+    white-space: revert;
+    text-align: center;
+}
+
+.guessing__buttons {
+    display: flex;
+    gap: 3rem;
+}
+
+/*.guessing__yes {*/
+/*    font-size: 4rem;*/
+/*    width: 4rem;*/
+/*    height: 4rem;*/
+/*    color: var(--color-white);*/
+/*    background-color: var(--color-primary);*/
+/*    transition: var(--transition);*/
+/*    border-radius: 50%;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.guessing__btn {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+
+    color: var(--color-white);
+
+    transition: var(--transition);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none
+}
+.guessing__btn:hover {
+    transform: scale(1.2);
+}
+
+.guessing__icon {
+    width: 3rem;
+    font-weight: 700;
+}
+
+.guessing__btn.guessing__btn-yes {
+    background-color: green;
+}
+
+.guessing__btn.guessing__btn-no {
+    background-color: #a10d0d;
+}
+
+.guessing__timer-value {
+    font-size: 3rem;
+}

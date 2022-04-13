@@ -1,0 +1,36 @@
+.main {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__image {
+    width: clamp(200px, 60%, 350px);
+    margin-bottom: 30px;
+}
+
+.btn-menu {
+    font-size: 25px;
+    width: 90%;
+    margin: 0.2rem;
+}
+
+.main__option-list {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.main__option {
+    margin-top: 0.2em;
+    max-width: 24%;
+    height: 24%;
+}
+
+.option__icon {
+    font-size: 200px;
+    width: 100%;
+    height: 100%;
+}

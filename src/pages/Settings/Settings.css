@@ -1,0 +1,133 @@
+/* //////////////////////////////////////// General //////////////////////////////////////////// */
+.unselectable {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+.settings {
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border: 3px solid var(--color-primary);
+    border-radius: 2rem;
+}
+
+.settings__props-wrap {
+    padding-left: 1rem;
+}
+
+.settings__title {
+    color: var(--color-primary);
+    align-self: center;
+    position: relative;
+}
+.settings__title:before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    border-bottom: 3px solid var(--color-primary);
+    color: var(--color-primary);
+    align-self: center;
+}
+
+.settings__props-title {
+    margin-top: 1rem;
+    color: var(--color-primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.settings__radio-label {
+    display: block;
+}
+
+.settings__radio-label>input {
+    margin-right: 0.5rem;
+}
+
+.settings__check {
+    margin-left: 0.5rem;
+}
+
+/* //////////////////////////////////////// Score //////////////////////////////////////////// */
+
+.settings__max-score {
+    display: inline;
+    margin-left: 0.5rem;
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-primary);
+    min-width: 0.5rem;
+    max-width: 2rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-align: center;
+}
+
+/* //////////////////////////////////////// Time //////////////////////////////////////////// */
+
+.settings__time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.settings__time-value {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-left: 0.5rem;
+    font-size: 1.5rem;
+    position: relative;
+}
+.settings__time-value:after{
+    content: 'сек';
+    position: absolute;
+    bottom: 0.5rem;
+    right: -1.3rem;
+    font-size: 0.7rem;
+}
+.settings__time-icon {
+    color: var(--color-primary);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.settings__time-icon:active {
+    transform: scale(1.2);
+    background-color: transparent;
+    
+}
+
+
+/* //////////////////////////////////////// Checkbox //////////////////////////////////////////// */
+
+.settings__check-label {
+
+}
+
+.settings__check-label>input {
+    margin-right: 0.5rem;
+}
+
+
+/* //////////////////////////////////////// Buttons //////////////////////////////////////////// */
+
+.settings__buttons {
+    margin-top: 2rem;
+}
+
+.settings__button.btn {
+    font-size: 0.7rem;
+    padding: 0.7rem;
+    margin: 0.3rem;
+}

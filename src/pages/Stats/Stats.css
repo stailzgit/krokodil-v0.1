@@ -1,0 +1,79 @@
+.stats-wrap {
+    width: clamp(300px, 100%, 400px);
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-bg);
+    border: 3px solid var(--color-primary);
+    border-radius: 2rem;
+}
+
+.stats__title {
+    color: var(--color-primary);
+    align-self: center;
+    position: relative;
+}
+.stats__title:before {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    border-bottom: 3px solid var(--color-primary);
+    color: var(--color-primary);
+    align-self: center;
+}
+
+
+.stats__list {
+    width: 100%;
+    align-self: flex-start;
+}
+
+.stats__list-item {
+    background-color: transparent;
+    font-size: 1rem;
+    padding: 0.5rem 4rem 0.5rem 1rem;
+    border-radius: 2rem;
+    position: relative;
+    word-wrap: break-word;
+    white-space: revert;
+}
+
+.stats__list-item.stats__list-item-active {
+    background-color: green;
+}
+
+.stats__item-name {
+
+}
+
+.stats__item-score {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stats__card-rest {
+    align-self: center;
+}
+
+.stats__button {
+    font-size: 1rem;
+    border-radius: 2rem;
+    border: 3px solid var(--color-primary);
+}
+
+.stats__back {
+    align-self: flex-start;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+}
+
+.stats__back-icon {
+    margin-right: 0.3rem;
+}

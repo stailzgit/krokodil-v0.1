@@ -1,0 +1,33 @@
+.winner-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.winner__title {
+    font-size: 2rem;
+}
+
+.winner__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.winner__list-item {
+    display: block;
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 1.5rem;
+    padding: 0.5rem 2rem;
+    transition: var(--transition);
+}
+
+.winner__list-item:hover {
+    transform: scale(1.1);
+    /* background-color: transparent;
+    color: var(--color-primary); */
+    cursor: pointer;
+}
