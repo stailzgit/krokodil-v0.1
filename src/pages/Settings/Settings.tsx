@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ChangeEvent } from "react";
 import "./Settings.css";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
@@ -37,7 +37,20 @@ const Settings = (props: Props) => {
     }
   };
 
+  const onMaxScoreChange = (event: ChangeEvent<HTMLInputElement>) => {
+    let tmpValue = event.currentTarget.value;
+    if (tmpValue.length > 4) {
+      tmpValue = tmpValue.slice(0, 4);
+    }
+    if (tmpValue.length > 1 && tmpValue[0] === "0") {
+      debugger;
+      tmpValue = tmpValue.slice(1);
+    }
+    setScore(+tmpValue);
+  };
+
   const onSaveSettings = () => {
+    if (score < 1) return;
     dispatch(
       saveSettings({
         typeEndGame: localTypeEndGame,
@@ -99,10 +112,9 @@ const Settings = (props: Props) => {
           <span>наберут очков</span>
           <input
             className="settings__max-score"
-            type="text"
+            type="number"
             value={score}
-            maxLength={4}
-            onChange={(e) => setScore(+e.currentTarget.value)}
+            onChange={onMaxScoreChange}
           />
         </label>
       </div>
