@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import Main from "./pages/Main/Main";
 import "./App.css";
 import Settings from "./pages/Settings/Settings";
@@ -13,6 +13,7 @@ import Guessing from "./pages/Guessing/Guessing";
 import WinningPlayer from "./pages/Guessing/WinningPlayer/WinningPlayer";
 import GameResults from "./pages/GameResults/GameResults";
 import { useAppSelector } from "./hooks/redux";
+import { basename } from "path";
 
 const App = () => {
   const { isGameProcess } = useAppSelector((state) => state.settingsSlice);
