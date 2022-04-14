@@ -43,7 +43,6 @@ const Settings = (props: Props) => {
       tmpValue = tmpValue.slice(0, 4);
     }
     if (tmpValue.length > 1 && tmpValue[0] === "0") {
-      debugger;
       tmpValue = tmpValue.slice(1);
     }
     setScore(+tmpValue);

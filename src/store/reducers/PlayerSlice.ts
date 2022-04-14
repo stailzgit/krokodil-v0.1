@@ -1,7 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IPlayer } from "../../models/IPlayer";
 import { v4 as uuidv4 } from "uuid";
-import { clearStorage } from "../../utils/local-storage";
 
 export type TypeStylePlayers = "Teams" | "Players";
 

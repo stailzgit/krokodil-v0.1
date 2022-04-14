@@ -35,12 +35,6 @@
     opacity: 0;
 }
 
-
-/* .cards-page__card:hover {
-    background-color: transparent;
-    border: 3px solid var(--color-primary);
-} */
-
 .cards-page__card__img-wrap {
     overflow: hidden;
     border-radius: 1rem;
@@ -68,12 +62,6 @@
     color: var(--color-primary);
 }
 
-.cards-page__card-check {}
-
 .cards-page__card-count {
     display: flex;
-}
-
-.cards-page__card-count-icon {
-    /* font-size: 0.9rem; */
 }

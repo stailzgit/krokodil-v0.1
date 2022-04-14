@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 0;
 }
 
 .main__image {
-    width: clamp(300px, 60%, 500px);
+    width: clamp(200px, 60%, 500px);
     margin-bottom: -9px;
-    z-index: 10;
+    z-index: 1;
 }
 
 .btn-menu {
@@ -34,4 +35,55 @@
     font-size: 200px;
     width: 100%;
     height: 100%;
+}
+
+/*///////////////////  Modal  ///////////////// */
+
+
+
+.main__modal {
+    width: clamp(300px, 80%, 400px);
+    min-height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-bg);
+    border: 3px solid var(--color-primary);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.main__modal-overlay {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(169, 177, 234, 0.6);
+}
+
+.main__modal-title {
+    /* margin-bottom: 1rem; */
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.main__modal-text {
+    padding: 0.5rem;
+}
+
+.main__modal-btn-list {
+    width: clamp(250px, 100%, 500px);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn.btn-primary.main__modal-btn {
+    width: 40%;
 }

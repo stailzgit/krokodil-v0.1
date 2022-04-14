@@ -42,7 +42,11 @@ const LevelCards = (props: PropsType) => {
   return (
     <div className={styleCard} onClick={onToggleSelectCard}>
       <div className="cards-page__card__img-wrap">
-        <img src={levelsHeaders[levelNumber]?.img} alt="" />
+        <img
+          src={levelsHeaders[levelNumber]?.img}
+          alt="lvl-img"
+          style={{ minWidth: "80px", minHeight: "80px" }}
+        />
       </div>
 
       <h5 className="cards-page__card-title">

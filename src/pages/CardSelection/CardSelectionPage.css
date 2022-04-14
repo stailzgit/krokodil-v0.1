@@ -10,6 +10,11 @@
     margin-bottom: 1rem;
 }
 
+.cards-page__start-game {
+    color: var(--color-white);
+    font-weight: 600;
+}
+
 .cards-page__sections-list {
     display: flex;
     flex-direction: column;

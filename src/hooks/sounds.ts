@@ -18,10 +18,12 @@ export const krocodilSound = {
   success: () =>
     new Howl({
       src: [SuccessSound, "play_success"],
+      volume: 0.5,
     }).play(),
   failure: () =>
     new Howl({
       src: [FailureSound, "play_failure"],
+      volume: 0.5,
     }).play(),
   startGame: () =>
     new Howl({

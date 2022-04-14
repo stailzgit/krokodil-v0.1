@@ -17,7 +17,6 @@ const CardSelectionPage = () => {
   const { totalCards, themesCards } = useAppSelector(
     (state) => state.cardsReducer
   );
-  const { isGameProcess } = useAppSelector((state) => state.settingsSlice);
 
   const { isSound } = useAppSelector((state) => state.settingsSlice);
   const navigate = useNavigate();

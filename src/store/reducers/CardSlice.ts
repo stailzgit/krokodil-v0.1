@@ -1,15 +1,6 @@
-import {
-  createEntityAdapter,
-  createSelector,
-  createSlice,
-  PayloadAction,
-} from "@reduxjs/toolkit";
-import { IPlayer } from "../../models/IPlayer";
-import { v4 as uuidv4 } from "uuid";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import Cards from "../../store/Cards.json";
 import { IThemeCards, ILevel, IWord } from "../../models/ICards";
-import { FaLevelUpAlt } from "react-icons/fa";
-import { clearStorage } from "../../utils/local-storage";
 
 type CardStateType = {
   typeGame: string;
