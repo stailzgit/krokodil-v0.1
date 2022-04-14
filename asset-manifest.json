@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/krokodil/static/css/main.74a083e9.css",
-    "main.js": "/krokodil/static/js/main.e7ebcd4c.js",
+    "main.css": "/krokodil/static/css/main.ea90a025.css",
+    "main.js": "/krokodil/static/js/main.2100402e.js",
+    "static/media/gold.png": "/krokodil/static/media/gold.48a6ca1f6a112214f758.png",
     "static/media/failure.mp3": "/krokodil/static/media/failure.8da2396058e95c498930.mp3",
     "static/media/start_guessing.mp3": "/krokodil/static/media/start_guessing.5de7727ab9fa511fa1ec.mp3",
     "static/media/img-impossible.jpg": "/krokodil/static/media/img-impossible.fa4ac5361b9547865a96.jpg",
@@ -14,11 +15,11 @@
     "static/media/img-easy.jpg": "/krokodil/static/media/img-easy.26f1f126b35f145e6273.jpg",
     "static/media/start_game.mp3": "/krokodil/static/media/start_game.561e3ea9b6ffa52469f0.mp3",
     "index.html": "/krokodil/index.html",
-    "main.74a083e9.css.map": "/krokodil/static/css/main.74a083e9.css.map",
-    "main.e7ebcd4c.js.map": "/krokodil/static/js/main.e7ebcd4c.js.map"
+    "main.ea90a025.css.map": "/krokodil/static/css/main.ea90a025.css.map",
+    "main.2100402e.js.map": "/krokodil/static/js/main.2100402e.js.map"
   },
   "entrypoints": [
-    "static/css/main.74a083e9.css",
-    "static/js/main.e7ebcd4c.js"
+    "static/css/main.ea90a025.css",
+    "static/js/main.2100402e.js"
   ]
 }
