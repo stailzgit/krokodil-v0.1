@@ -8,6 +8,7 @@ import { IThemeCards } from "../../models/ICards";
 import { cardsToGame } from "../../store/reducers/CardSlice";
 import { setGameProcess } from "../../store/reducers/SettingsSlice";
 import { krocodilSound } from "../../hooks/sounds";
+import GoToMain from "../../Components/GoToMain/GoToMain";
 
 const CardSelectionPage = () => {
   const dispatch = useAppDispatch();
@@ -34,12 +35,14 @@ const CardSelectionPage = () => {
         Выбор карт (
         {totalCards > 1000 ? `${(totalCards / 1000) | 0}тыс` : totalCards})
       </h2>
+
       <button
         className="btn btn-primary cards-page__start-game"
         onClick={onStartGameClick}
       >
         Начать игру
       </button>
+      <GoToMain />
       <div className="cards-page__sections-list">
         {themesCards.map((theme: IThemeCards) => (
           <ThemeCards {...theme} key={theme.themeId} />
