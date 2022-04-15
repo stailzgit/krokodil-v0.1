@@ -1,0 +1,15 @@
+.go_to_main {
+    margin: 1rem auto;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.go_to_main:hover {
+    transform: scale(1.2);
+}
+
+.go_to_main-icon {
+    margin-right: 0.3rem;
+}

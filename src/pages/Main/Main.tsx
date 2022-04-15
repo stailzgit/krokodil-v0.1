@@ -22,12 +22,15 @@ const Main = (props: Props) => {
   const [isOpenModal, setisOpenModal] = useState(false);
 
   const options = [
-    { icon: <CgCardHearts className="option__icon" />, route: ROUTES.SETTINGS },
+    {
+      icon: <CgCardHearts className="option__icon" />,
+      route: ROUTES.GAME_SPECIFICS,
+    },
     { icon: <FiSettings className="option__icon" />, route: ROUTES.SETTINGS },
-    { icon: <BsBook className="option__icon" />, route: ROUTES.SETTINGS },
+    { icon: <BsBook className="option__icon" />, route: ROUTES.RULES },
     {
       icon: <RiErrorWarningLine className="option__icon" />,
-      route: ROUTES.SETTINGS,
+      route: ROUTES.ABOUT,
     },
   ];
 

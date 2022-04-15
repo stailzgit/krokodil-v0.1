@@ -108,7 +108,9 @@ const CreatePlayers = () => {
       </div>
 
       <div className="create-players__list">
-        {!players.length && <h2>No {stylePlayers}</h2>}
+        {!players.length && (
+          <h2>Нет {stylePlayers === "Players" ? "игроков" : "команд"}</h2>
+        )}
         {players.map((player: IPlayer) => (
           <div className="create-players__list-item" key={player.id}>
             <div className="create-players__player">{player.name}</div>

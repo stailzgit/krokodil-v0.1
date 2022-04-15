@@ -9,4 +9,7 @@ export const ROUTES = {
   GUESSING: "/guessing",
   WINNING_PLAYER: "/winning-player",
   GAME_RESULTS: "/game-results",
+  ABOUT: "/about",
+  RULES: "/rules",
+  GAME_SPECIFICS: "/game-specifics",
 };

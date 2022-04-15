@@ -2,12 +2,12 @@ import React, { useState, useEffect, ChangeEvent } from "react";
 import "./Settings.css";
 import { AiFillMinusCircle } from "react-icons/ai";
 import { AiFillPlusCircle } from "react-icons/ai";
-import { useAppSelector, useAppDispatch } from "../../hooks/redux";
-import { saveSettings } from "../../store/reducers/SettingsSlice";
+import { useAppSelector, useAppDispatch } from "../../../hooks/redux";
+import { saveSettings } from "../../../store/reducers/SettingsSlice";
 import { shallowEqual } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { ROUTES } from "../../hooks/routes";
-import { initialState } from "./../../store/reducers/SettingsSlice";
+import { ROUTES } from "../../../hooks/routes";
+import { initialState } from "../../../store/reducers/SettingsSlice";
 type Props = {};
 
 const Settings = (props: Props) => {
