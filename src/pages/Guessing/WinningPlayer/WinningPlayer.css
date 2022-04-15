@@ -28,7 +28,5 @@
 
 .winner__list-item:hover {
     transform: scale(1.1);
-    /* background-color: transparent;
-    color: var(--color-primary); */
     cursor: pointer;
 }

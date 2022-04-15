@@ -23,11 +23,7 @@ const GameResults = (props: Props) => {
     <div className="results-wrap">
       <div className="results__gold-wrap">
         <div className="results__gold-title">{finalResults[0].name}</div>
-        <img
-          src={GoldImg}
-          alt="img_gold"
-          style={{ minWidth: "200px", minHeight: "170px" }}
-        />
+        <img src={GoldImg} alt="img_gold" />
       </div>
 
       <h3 className="results__list-title">

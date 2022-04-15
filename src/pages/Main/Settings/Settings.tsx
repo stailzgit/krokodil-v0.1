@@ -8,9 +8,8 @@ import { shallowEqual } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../../hooks/routes";
 import { initialState } from "../../../store/reducers/SettingsSlice";
-type Props = {};
 
-const Settings = (props: Props) => {
+const Settings = () => {
   const { typeEndGame, maxScore, isSound, roundTime, isNeedRoundTime } =
     useAppSelector((state) => state.settingsSlice, shallowEqual);
   const dispatch = useAppDispatch();

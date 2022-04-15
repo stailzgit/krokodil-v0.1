@@ -1,5 +1,4 @@
 import React from "react";
-import { CardDeckType, LevelsTypeString, LevelsType } from "../TypesCards";
 import LevelCards from "../LevelCards/LevelCards";
 import "./ThemeCards.css";
 import { IThemeCards } from "../../../models/ICards";

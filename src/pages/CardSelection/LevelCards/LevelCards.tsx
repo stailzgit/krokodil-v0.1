@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { CardDeckType, LevelsTypeString } from '../TypesCards';
 import "./LevelCards.css";
 import { CgCardClubs } from "react-icons/cg";
 import { ImCheckboxChecked } from "react-icons/im";
@@ -9,7 +8,7 @@ import ImageLevel from "../../../assets/levels/img-normal.jpg";
 import ImageHard from "../../../assets/levels/img-hard.jpg";
 import ImageImpossible from "../../../assets/levels/img-impossible.jpg";
 import ImageSuicide from "../../../assets/levels/img-suicide.jpg";
-import { useAppSelector, useAppDispatch } from "../../../hooks/redux";
+import { useAppDispatch } from "../../../hooks/redux";
 import { toggleSelectCard } from "../../../store/reducers/CardSlice";
 import { ILevel } from "../../../models/ICards";
 
@@ -42,17 +41,12 @@ const LevelCards = (props: PropsType) => {
   return (
     <div className={styleCard} onClick={onToggleSelectCard}>
       <div className="cards-page__card__img-wrap">
-        <img
-          src={levelsHeaders[levelNumber]?.img}
-          alt="lvl-img"
-          style={{ minWidth: "80px", minHeight: "80px" }}
-        />
+        <img src={levelsHeaders[levelNumber]?.img} alt="lvl-img" />
       </div>
 
       <h5 className="cards-page__card-title">
         {levelsHeaders[levelNumber]?.title}
       </h5>
-      {/* <span className='cards-page__card-preview'>{preview}</span> */}
 
       <div className="cards-page__card-info">
         {checked ? (
@@ -61,7 +55,9 @@ const LevelCards = (props: PropsType) => {
           <ImCheckboxUnchecked className="cards-page__card-check" />
         )}
         <div className="cards-page__card-count">
-          {words.length > 10000 ? "9999+" : words.length}
+          {words.length > 1000
+            ? `${(words.length / 1000) | 0}т.`
+            : words.length}
           <CgCardClubs className="cards-page__card-count-icon" />
         </div>
       </div>

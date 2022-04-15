@@ -1,7 +1,4 @@
 import React, { useEffect } from "react";
-import Card from "./LevelCards/LevelCards";
-import Cards from "../../store/Cards.json";
-import { CardsType } from "./TypesCards";
 import ThemeCards from "./ThemeCards/ThemeCards";
 import "./CardSelectionPage.css";
 import { useAppSelector, useAppDispatch } from "../../hooks/redux";
@@ -33,7 +30,9 @@ const CardSelectionPage = () => {
   return (
     <div className="cards-page">
       <h2 className="cards-page__title">
-        Выбор карт ({totalCards > 999 ? "999+" : totalCards})
+        {/* Выбор карт ({totalCards > 999 ? "999+" : totalCards}) */}
+        Выбор карт (
+        {totalCards > 1000 ? `${(totalCards / 1000) | 0}тыс` : totalCards})
       </h2>
       <button
         className="btn btn-primary cards-page__start-game"

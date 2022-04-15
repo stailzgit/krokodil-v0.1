@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import Cards from "../../store/Cards.json";
-import { IThemeCards, ILevel, IWord } from "../../models/ICards";
+import { ThemesOwn } from "../../store/data/ThemesOwn";
+import { IThemeCards, IWord } from "../../models/ICards";
 
 type CardStateType = {
   typeGame: string;
@@ -14,7 +14,7 @@ type CardStateType = {
 };
 
 const initialCards = () => {
-  const themes: IThemeCards[] = JSON.parse(JSON.stringify(Cards)).data;
+  const themes: IThemeCards[] = ThemesOwn;
   themes.forEach((theme) => {
     theme.levels.forEach((level) => {
       level.checked = false;

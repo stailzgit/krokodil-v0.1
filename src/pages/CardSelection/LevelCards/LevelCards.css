@@ -1,6 +1,5 @@
 .cards-page__card {
     position: relative;
-    /* margin: 0.5rem; */
     padding: 0.6rem 0.6rem 2rem 0.6rem;
     border: 1px solid transparent;
     min-width: 95px;
@@ -38,6 +37,11 @@
 .cards-page__card__img-wrap {
     overflow: hidden;
     border-radius: 1rem;
+}
+
+.cards-page__card__img-wrap > img {
+    min-width: 80px;
+    min-height: 80px;
 }
 
 .cards-page__card-title {

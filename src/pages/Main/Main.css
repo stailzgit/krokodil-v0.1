@@ -9,8 +9,13 @@
 
 .main__image {
     width: clamp(200px, 60%, 500px);
-    margin-bottom: -9px;
+    margin-bottom: -7.5px;
     z-index: 1;
+}
+
+.main__image > img{
+    min-width: 200px;
+    min-height: 100px;
 }
 
 .btn-menu {

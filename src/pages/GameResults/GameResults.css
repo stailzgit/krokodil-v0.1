@@ -20,8 +20,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.results__gold-wrap > img {
+    min-width: 200px;
+    min-height: 170px;
 
 }
+
 
 .results__gold-wrap > img {
     object-fit: contain;

@@ -13,9 +13,7 @@ import { newGame } from "../../store/reducers/SettingsSlice";
 import { ROUTES } from "../../hooks/routes";
 import Modal from "react-modal";
 
-type Props = {};
-
-const Main = (props: Props) => {
+const Main = () => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { isGameProcess } = useAppSelector((state) => state.settingsSlice);
@@ -34,8 +32,6 @@ const Main = (props: Props) => {
     },
   ];
 
-  // const isShowContinueGame = !!localStorage.getItem("crocodiller-state");
-
   const onNewGameClick = () => {
     //Если игра начата, то просим подтвердить
     if (isGameProcess) {
@@ -47,6 +43,7 @@ const Main = (props: Props) => {
   };
 
   const createNewGame = () => {
+    setisOpenModal(false);
     dispatch(resetPlayerSlice());
     dispatch(resetCardSlice());
     dispatch(newGame());
@@ -64,11 +61,7 @@ const Main = (props: Props) => {
   return (
     <div className="main">
       <div className="main__image">
-        <img
-          src={Logo}
-          alt="logo-img"
-          style={{ minWidth: "200px", minHeight: "100px" }}
-        />
+        <img src={Logo} alt="logo-img" />
       </div>
       <button className="btn-menu btn btn-primary" onClick={onNewGameClick}>
         Новая игра

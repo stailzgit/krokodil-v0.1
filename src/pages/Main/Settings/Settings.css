@@ -116,15 +116,12 @@
 .settings__time-icon:active {
     transform: scale(1.2);
     background-color: transparent;
-    
 }
 
 
 /* //////////////////////////////////////// Checkbox //////////////////////////////////////////// */
 
-.settings__check-label {
 
-}
 
 .settings__check-label>input {
     margin-right: 0.5rem;

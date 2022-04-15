@@ -1,10 +1,4 @@
-import React, {
-  ChangeEvent,
-  MouseEvent,
-  MouseEventHandler,
-  useEffect,
-  useState,
-} from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import { FaUsers } from "react-icons/fa";
 import "./CreatePlayersPage.css";
 import { FaUserPlus } from "react-icons/fa";
@@ -28,7 +22,6 @@ const CreatePlayers = () => {
   const { players, stylePlayers } = useAppSelector(
     (state) => state.playersReducer
   );
-  const { isGameProcess } = useAppSelector((state) => state.settingsSlice);
   const navigate = useNavigate();
 
   // const [stylePlayers, setStylePlayers] = useState<TypeStylePlayers>('Players')

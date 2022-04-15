@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./ChoiceWord.css";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { getFiveWords, setCurrentWord } from "../../store/reducers/CardSlice";
-import { useSelector } from "react-redux";
 import { IWord } from "../../models/ICards";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../hooks/routes";

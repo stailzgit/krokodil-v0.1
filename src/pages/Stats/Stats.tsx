@@ -3,13 +3,11 @@ import { useAppSelector, useAppDispatch } from "../../hooks/redux";
 import "./Stats.css";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../hooks/routes";
-import { useDispatch } from "react-redux";
 import { checkEndGame } from "../../store/reducers/SettingsSlice";
 import { IPlayer } from "../../models/IPlayer";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
-type Props = {};
 
-const Stats = (props: Props) => {
+const Stats = () => {
   const dispatch = useAppDispatch();
   const { isEndGame } = useAppSelector((state) => state.settingsSlice);
   const { players, activePlayerIndex } = useAppSelector(
@@ -18,7 +16,6 @@ const Stats = (props: Props) => {
   const { unusedCardsCount, usedWords } = useAppSelector(
     (state) => state.cardsReducer
   );
-  const { cardsInGame } = useAppSelector((state) => state.cardsReducer);
   const navigate = useNavigate();
 
   const onClickButton = () => {

@@ -21,17 +21,6 @@
     gap: 3rem;
 }
 
-/*.guessing__yes {*/
-/*    font-size: 4rem;*/
-/*    width: 4rem;*/
-/*    height: 4rem;*/
-/*    color: var(--color-white);*/
-/*    background-color: var(--color-primary);*/
-/*    transition: var(--transition);*/
-/*    border-radius: 50%;*/
-/*    cursor: pointer;*/
-/*}*/
-
 .guessing__btn {
     width: 4rem;
     height: 4rem;
