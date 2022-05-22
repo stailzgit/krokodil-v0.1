@@ -18,7 +18,7 @@ const RenderTime = (
   const [stopSound, setStopSound] = useState(false);
   //Ререндер 2 раза и из-за этого нужно предотвратить повтор звука - stopSound и setTimeout
   if (isSound && !stopSound) {
-    if (remainingTime === roundTime || remainingTime === 10) {
+    if (remainingTime === roundTime - 1 || remainingTime === 10) {
       krocodilSound.tiktak();
       setStopSound(true);
       setTimeout(() => {
